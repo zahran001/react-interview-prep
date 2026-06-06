@@ -1,0 +1,7 @@
+{
+  "name": "practice-react",
+  "private": true,
+  "scripts": {
+    "setup-monorepo": "pnpm --filter setup-monorepo dev"
+  }
+}
