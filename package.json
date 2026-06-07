@@ -2,6 +2,7 @@
   "name": "practice-react",
   "private": true,
   "scripts": {
-    "setup-monorepo": "pnpm --filter setup-monorepo dev"
+    "setup-monorepo": "pnpm --filter setup-monorepo dev",
+    "accordion-ui": "pnpm --filter accordion-ui dev"
   }
 }
