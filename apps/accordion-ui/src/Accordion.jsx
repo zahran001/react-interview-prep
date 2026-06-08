@@ -1,5 +1,5 @@
 import data from "./data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Accordion({ enableMultiSelect }) {
   const [activeId, setActiveId] = useState(null);
@@ -21,6 +21,14 @@ export default function Accordion({ enableMultiSelect }) {
       setOpenIds([...openIds, id]);
     }
   }
+
+  // reset via a useEffect
+  // useEffect with a dependency - run it whenever enableMultiSelect changes
+  useEffect(() => {
+    // mode just changed -> clear both
+    setActiveId(null);
+    setOpenIds([]);
+  }, [enableMultiSelect]); // runs whenever this prop changes
 
   return (
     <div>
